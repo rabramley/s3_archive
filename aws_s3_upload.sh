@@ -40,7 +40,7 @@ fi
 
 echo "Upload starting"
 
-nice trickle -s -u 16 /usr/local/bin/aws s3 sync ${SOURCE_DIR} s3://${S3_BUCKET} --exclude ".*" --exclude "*/.*" --no-follow-symlinks --size-only
+nice trickle -s -u 32 /usr/local/bin/aws s3 sync ${SOURCE_DIR} s3://${S3_BUCKET} --exclude ".*" --exclude "*/.*" --no-follow-symlinks --size-only
 
 echo COMPLETED archiving at `date`
 
